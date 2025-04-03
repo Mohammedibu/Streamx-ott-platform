@@ -1,0 +1,23 @@
+{
+    "navbar": {
+      "home": "Home",
+      "movies": "Movies",
+      "tvShows": "TV Shows",
+      "myList": "My List"
+    },
+    "landingPage": {
+      "title": "Unlimited Movies, TV Shows and More.",
+      "subtitle": "Watch anywhere. Cancel anytime.",
+      "emailPlaceholder": "Email address",
+      "getStarted": "Get Started"
+    },
+    "login": {
+      "signIn": "Sign In",
+      "signUp": "Sign Up",
+      "name": "Your Name",
+      "email": "Email",
+      "password": "Password",
+      "newToStreamX": "New to StreamX?",
+      "alreadyHaveAccount": "Already have an account?"
+    }
+  }
