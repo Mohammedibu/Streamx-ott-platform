@@ -3,6 +3,7 @@ import { fetchTVShows } from '../Services/api.js';
 import MovieCard from '../components/MovieCard';
 import Loading from '../components/Loading';
 import Navbar from '../components/Navbar.jsx';
+import { useTranslation } from 'react-i18next';
 import '../App.css';
 
 const TVShows = () => {
@@ -11,12 +12,13 @@ const TVShows = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
+  const { t } = useTranslation();
   
   const categories = [
-    { id: 'popular', name: 'Popular' },
-    { id: 'top_rated', name: 'Top Rated' },
-    { id: 'on_the_air', name: 'On The Air' },
-    { id: 'airing_today', name: 'Airing Today' }
+    { id: 'popular', name: t('categories.popular') },
+    { id: 'top_rated', name: t('categories.topRated') },
+    { id: 'on_the_air', name: t('categories.onTheAir') },
+    { id: 'airing_today', name: t('categories.airingToday') }
   ];
 
   useEffect(() => {
@@ -48,10 +50,10 @@ const TVShows = () => {
 
   return (
     <>
-<Navbar />
+    <Navbar />
     <div className="content-page">
       <div className="page-header">
-        <h1 className="page-title">TV Shows</h1>
+        <h1 className="page-title">{t('navigation.tvShows')}</h1>
         <div className="category-tabs">
           {categories.map((cat) => (
             <button
@@ -81,17 +83,17 @@ const TVShows = () => {
               disabled={page === 1}
               onClick={() => handlePageChange(page - 1)}
             >
-              Previous
+              {t('pagination.previous')}
             </button>
             <span className="page-info">
-              Page {page} of {totalPages}
+              {t('pagination.page')} {page} {t('pagination.of')} {totalPages}
             </span>
             <button
               className="page-button"
               disabled={page === totalPages}
               onClick={() => handlePageChange(page + 1)}
             >
-              Next
+              {t('pagination.next')}
             </button>
           </div>
         </>

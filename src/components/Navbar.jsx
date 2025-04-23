@@ -5,14 +5,14 @@ import '../App.css';
 import { logout } from '../../firebase';
 import logo from "../../src/assets/logoX.png";
 import VoiceSearch from './VoiceSearch';
-
-
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
-  
+  const { t } = useTranslation();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -47,31 +47,30 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${show && 'navbar-black'}`}>
       <div className="navbar-container">
-        <Link to="/Home" className="navbar-logo">
-          <img src={logo} alt='StreamX Logo' className='logoset'/>
+        <Link to="/" className="navbar-logo">
+          <img src={logo} alt={t('app.name')} className='logoset'/>
         </Link>
         
         <div className="navbar-links">
           <Link to="/Home" className={location.pathname === '/Home' ? 'active' : ''}>
-            Home
+            {t('navigation.home')}
           </Link>
           <Link to="/movies" className={location.pathname === '/movies' ? 'active' : ''}>
-            Movies
+            {t('navigation.movies')}
           </Link>
           <Link to="/tvshows" className={location.pathname === '/tvshows' ? 'active' : ''}>
-            TV Shows
+            {t('navigation.tvShows')}
           </Link>
           <Link to="/mylist" className={location.pathname === '/mylist' ? 'active' : ''}>
-            My List
+            {t('navigation.myList')}
           </Link>
-          
         </div>
         
         <div className="search-and-profile">
           <form className="search-container" onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Search..."
+              placeholder={t('search.placeholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="search-input"
@@ -83,8 +82,10 @@ const Navbar = () => {
             <VoiceSearch />
           </form>
           
+          <LanguageSwitcher />
+          
           <div className='sign'>
-            <button onClick={()=>{logout()}} className='sign-out-button'>SignOut</button>
+            <button onClick={()=>{logout()}} className='sign-out-button'>{t('auth.signOut')}</button>
           </div>
         </div>
       </div>

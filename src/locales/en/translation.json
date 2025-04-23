@@ -1,0 +1,92 @@
+{
+  "app": {
+    "name": "StreamX"
+  },
+  "landing": {
+    "hero": {
+      "title": "Unlimited movies, TV shows, and more",
+      "subtitle": "Watch anywhere. Cancel anytime.",
+      "callToAction": "Ready to watch? Enter your email to create or restart your membership."
+    },
+    "buttons": {
+      "signIn": "Sign In",
+      "getStarted": "Get Started"
+    },
+    "form": {
+      "emailPlaceholder": "Email address",
+      "checking": "Checking..."
+    }
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "signUp": "Sign Up",
+    "name": "Your Name",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "needHelp": "Need Help?",
+    "newToStreamX": "New to StreamX?",
+    "signUpNow": "Sign Up Now",
+    "alreadyHaveAccount": "Already have Account?",
+    "signInNow": "Sign In Now"
+  },
+  "navigation": {
+    "home": "Home",
+    "movies": "Movies",
+    "tvShows": "TV Shows",
+    "myList": "My List",
+    "search": "Search",
+    "back": "Back to Home"
+  },
+  "categories": {
+    "all": "All",
+    "trending": "Trending Now",
+    "popular": "Popular",
+    "topRated": "Top Rated",
+    "upcoming": "Upcoming",
+    "nowPlaying": "Now Playing",
+    "onTheAir": "On The Air",
+    "airingToday": "Airing Today",
+    "popularMovies": "Popular Movies",
+    "topRatedMovies": "Top Rated Movies",
+    "popularTVShows": "Popular TV Shows",
+    "topRatedTVShows": "Top Rated TV Shows"
+  },
+  "videoPage": {
+    "overview": "Overview",
+    "addToList": "Add to My List",
+    "inMyList": "In My List",
+    "rating": "Rating",
+    "season": "Season",
+    "seasons": "Seasons",
+    "min": "min"
+  },
+  "myList": {
+    "emptyTitle": "Your list is empty",
+    "emptyDescription": "Add movies and TV shows to your list to see them here."
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of"
+  },
+  "search": {
+    "placeholder": "Search for movies or TV shows...",
+    "noResults": "No results found for your search",
+    "tryAgain": "Please try a different search term.",
+    "voiceSearch": "Search with voice"
+  },
+  "footer": {
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "help": "Help",
+    "legal": "Legal",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Preferences",
+    "language": "Language",
+    "allRightsReserved": "All Rights Reserved"
+  }
+}

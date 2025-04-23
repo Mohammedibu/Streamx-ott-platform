@@ -1,3 +1,4 @@
+
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Home from './pages/Home';
@@ -10,7 +11,9 @@ import Loading from './components/Loading';
 import { GlobalProvider, useGlobalContext } from './Context/GlobalContext.jsx';
 import './App.css';
 import Login from './pages/Login/Login.jsx';
-import LandingPage from './pages/LandingPage/LandingPage.jsx';
+import LandingPage from "./pages/LandingPage/LandingPage.jsx";
+import SplashScreen from "./components/SplashScreen";
+
 
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase.js';
@@ -35,6 +38,7 @@ const AppContent = () => {
   return (
     <>
       {isLoading && <Loading />}
+      <SplashScreen />
       
       <div className="app-container">
         <ToastContainer theme="dark" />

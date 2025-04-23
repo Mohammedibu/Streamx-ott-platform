@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import MovieCard from './MovieCard';
+import { useTranslation } from 'react-i18next';
 import '../App.css';
 
 const Row = ({ title, fetchFunction, params = [] }) => {
   const [items, setItems] = useState([]);
   const [scrollPosition, setScrollPosition] = useState(0);
   const rowRef = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {

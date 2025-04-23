@@ -1,0 +1,92 @@
+{
+  "app": {
+    "name": "StreamX"
+  },
+  "landing": {
+    "hero": {
+      "title": "असीमित फिल्में, टीवी शो और बहुत कुछ",
+      "subtitle": "कहीं भी देखें। कभी भी रद्द करें।",
+      "callToAction": "देखने के लिए तैयार हैं? अपनी सदस्यता बनाने या पुनः आरंभ करने के लिए अपना ईमेल दर्ज करें।"
+    },
+    "buttons": {
+      "signIn": "साइन इन",
+      "getStarted": "शुरू करें"
+    },
+    "form": {
+      "emailPlaceholder": "ईमेल पता",
+      "checking": "जांच हो रही है..."
+    }
+  },
+  "auth": {
+    "signIn": "साइन इन",
+    "signOut": "साइन आउट",
+    "signUp": "साइन अप",
+    "name": "आपका नाम",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "rememberMe": "मुझे याद रखें",
+    "needHelp": "मदद चाहिए?",
+    "newToStreamX": "StreamX पर नए हैं?",
+    "signUpNow": "अभी साइन अप करें",
+    "alreadyHaveAccount": "पहले से ही खाता है?",
+    "signInNow": "अभी साइन इन करें"
+  },
+  "navigation": {
+    "home": "होम",
+    "movies": "फिल्में",
+    "tvShows": "टीवी शो",
+    "myList": "मेरी सूची",
+    "search": "खोज",
+    "back": "होम पर वापस जाएं"
+  },
+  "categories": {
+    "all": "सभी",
+    "trending": "अभी ट्रेंडिंग",
+    "popular": "लोकप्रिय",
+    "topRated": "शीर्ष रेटेड",
+    "upcoming": "आने वाली",
+    "nowPlaying": "अब चल रही हैं",
+    "onTheAir": "प्रसारण पर",
+    "airingToday": "आज प्रसारित",
+    "popularMovies": "लोकप्रिय फिल्में",
+    "topRatedMovies": "शीर्ष रेटेड फिल्में",
+    "popularTVShows": "लोकप्रिय टीवी शो",
+    "topRatedTVShows": "शीर्ष रेटेड टीवी शो"
+  },
+  "videoPage": {
+    "overview": "अवलोकन",
+    "addToList": "मेरी सूची में जोड़ें",
+    "inMyList": "मेरी सूची में है",
+    "rating": "रेटिंग",
+    "season": "सीज़न",
+    "seasons": "सीज़न",
+    "min": "मिनट"
+  },
+  "myList": {
+    "emptyTitle": "आपकी सूची खाली है",
+    "emptyDescription": "यहां देखने के लिए अपनी सूची में फिल्में और टीवी शो जोड़ें।"
+  },
+  "pagination": {
+    "previous": "पिछला",
+    "next": "अगला",
+    "page": "पेज",
+    "of": "का"
+  },
+  "search": {
+    "placeholder": "फिल्में या टीवी शो खोजें...",
+    "noResults": "आपकी खोज के लिए कोई परिणाम नहीं मिला",
+    "tryAgain": "कृपया एक अलग खोज शब्द का प्रयास करें।",
+    "voiceSearch": "आवाज़ से खोजें"
+  },
+  "footer": {
+    "aboutUs": "हमारे बारे में",
+    "contactUs": "संपर्क करें",
+    "help": "सहायता",
+    "legal": "कानूनी",
+    "terms": "उपयोग की शर्तें",
+    "privacy": "गोपनीयता नीति",
+    "cookies": "कुकी प्राथमिकताएं",
+    "language": "भाषा",
+    "allRightsReserved": "सर्वाधिकार सुरक्षित"
+  }
+}

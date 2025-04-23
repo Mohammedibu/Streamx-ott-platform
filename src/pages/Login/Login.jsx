@@ -4,9 +4,12 @@ import './Login.css';
 import logo from '../../assets/logoX.png';
 import { login, signup } from '../../../firebase';
 import netflix_spinner from '../../assets/netflix_spinner.gif';
+import { useTranslation } from 'react-i18next';
+
 
 const Login = () => {
-  const [signState, setSignState] = useState('Sign In');
+  const { t } = useTranslation();
+  const [signState, setSignState] = useState(t('auth.signIn'));
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,16 +22,20 @@ const Login = () => {
     // Check if email was passed from landing page
     if (location.state && location.state.email) {
       setEmail(location.state.email);
-      setSignState('Sign In'); // If they entered email on landing, assume new user
+      if (location.state.mode === 'signin') {
+        setSignState(t('auth.signIn'));
+      } else {
+        setSignState(t('auth.signUp'));
+      }
     }
-  }, [location]);
+  }, [location, t]);
 
   const user_auth = async (event) => {
     event.preventDefault();
     setLoading(true);
     
     try {
-      if (signState === "Sign In") {
+      if (signState === t('auth.signIn')) {
         await login(email, password);
         navigate('/home');
       } else {
@@ -49,16 +56,19 @@ const Login = () => {
     </div> :
 
     <div className='login'>
-      <img src={logo} className="login-logo" alt="" />
+      <div className="login-header">
+        <img src={logo} className="login-logo" alt="" />
+        
+      </div>
       <div className="login-form">
         <h1>{signState}</h1>
         <form>
-          {signState === "Sign Up" ? 
+          {signState === t('auth.signUp') ? 
             <input 
               value={name} 
               onChange={(e) => {setName(e.target.value)}} 
               type="text" 
-              placeholder="Your Name" 
+              placeholder={t('auth.name')} 
             /> : 
             <></>
           }
@@ -67,27 +77,27 @@ const Login = () => {
             value={email} 
             onChange={(e) => {setEmail(e.target.value)}} 
             type="email" 
-            placeholder="Email" 
+            placeholder={t('auth.email')} 
           />
           <input 
             value={password} 
             onChange={(e) => {setPassword(e.target.value)}} 
             type="password" 
-            placeholder="Password" 
+            placeholder={t('auth.password')} 
           />
           <button onClick={user_auth} type='submit'>{signState}</button>
           <div className="form-help">
             <div className="remember">
               <input type="checkbox" />
-              <label htmlFor=""> Remember me</label>
+              <label htmlFor="">{t('auth.rememberMe')}</label>
             </div>
-            <p>Need Help?</p>
+            <p>{t('auth.needHelp')}</p>
           </div>
         </form>
         <div className="form-switch">
-          {signState === "Sign In" ?  
-            <p>New to StreamX? <span onClick={() => {setSignState('Sign Up')}}>Sign Up Now</span></p> : 
-            <p>Already have Account? <span onClick={() => {setSignState('Sign In')}}>Sign In Now</span></p>
+          {signState === t('auth.signIn') ?  
+            <p>{t('auth.newToStreamX')} <span onClick={() => {setSignState(t('auth.signUp'))}}>{t('auth.signUpNow')}</span></p> : 
+            <p>{t('auth.alreadyHaveAccount')} <span onClick={() => {setSignState(t('auth.signIn'))}}>{t('auth.signInNow')}</span></p>
           }
         </div>
       </div>

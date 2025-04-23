@@ -1,5 +1,5 @@
-
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import Banner from '../components/Banner';
 import Row from '../components/Row';
 import { 
@@ -9,10 +9,13 @@ import {
 } from '../Services/api.js';
 import { useGlobalContext } from '../Context/GlobalContext.jsx';
 import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer';
+
 import '../App.css';
 
 const Home = () => {
   const { setIsLoading } = useGlobalContext();
+  const { t } = useTranslation();
 
   useEffect(() => {
     setIsLoading(true);
@@ -30,31 +33,32 @@ const Home = () => {
       <Banner />
       <div className="home-rows">
         <Row 
-          title="Trending Now" 
+          title={t('categories.trending')} 
           fetchFunction={fetchTrending} 
           params={['all', 'day']} 
         />
         <Row 
-          title="Popular Movies" 
+          title={t('categories.popularMovies')} 
           fetchFunction={fetchMovies} 
           params={['popular']} 
         />
         <Row 
-          title="Top Rated Movies" 
+          title={t('categories.topRatedMovies')} 
           fetchFunction={fetchMovies} 
           params={['top_rated']} 
         />
         <Row 
-          title="Popular TV Shows" 
+          title={t('categories.popularTVShows')} 
           fetchFunction={fetchTVShows} 
           params={['popular']} 
         />
         <Row 
-          title="Top Rated TV Shows" 
+          title={t('categories.topRatedTVShows')} 
           fetchFunction={fetchTVShows} 
           params={['top_rated']} 
         />
       </div>
+      <Footer />
     </div>
   );
 };
